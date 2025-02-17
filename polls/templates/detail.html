@@ -1,3 +1,6 @@
+{% extends "base.html" %}
+
+{% block content %}
 <form action="{% url 'polls:vote' question.id %}" method="post">
 {% csrf_token %}
 <fieldset>
@@ -20,3 +23,4 @@
 <!--<li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>-->
 
 </ul>
+{% endblock %}
